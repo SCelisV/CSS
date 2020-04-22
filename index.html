@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>CSS</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<table style="width:100%">
+			<tr>
+				<td></td>
+				<td></td> 
+			</tr>
+			<tr>
+				<td style="width:50%">
+					<p class="title2 my-bold my-center">PERFIL OCUPACIONAL</p>
+				</td>
+				<td style="width:50%">
+					<p class="detail">Desarrollo, análisis y administración de Sistemas de Información, aplicando las técnicas y tecnologías de la Informática en la gestión empresarial.
+						Asesoramiento y Administración en Proyectos de Informática y Sistemas de Información que involucren procesos administrativos y operativos en diferentes Sectores Productivos.
+						Experiencia  en la implantación de procedimientos de Migraciones  de datos en Sistemas Financieros,  diseñando  interfaces para su fusión y seguimiento.
+					</p>
+				</td> 
+			</tr>
+			<tr>
+				<td>
+					<p class="title">Soy un título</p>
+				</td>
+				<td>
+					<p class="detail">Soy un detalle</p>
+				</td> 
+			</tr>
+			<tr>
+				<td>
+					<ul class="list">
+						<li class="list-item">Item 1</li>
+						<li class="list-item">Item 2</li>
+						<li class="list-item">Item 3</li>
+						<li class="list-item">Item 4
+							<span>(final)</span>
+						</li>
+					</u1>
+				</td> 
+				<td>
+					<ol class="list">
+						<li class="item">Item 1</li>
+						<li class="item">Item 2</li>
+						<li class="item">Item 3</li>
+						<li class="item">Item 4
+							<span class="tag">(final)</span>
+						</li>
+					</o1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ul class="list">
+						<li class="item">Item 1</li>
+						<li class="item">Item 2</li>
+						<li class="item">Item 3</li>
+						<li class="item">Item 4
+							<ul>
+								<li>Subitem</li>
+								<li>Subitem</li>
+								<li>Subitem</li>
+							</ul>
+						</li>
+					</u1>
+				</td>
+				<td>
+					<h1 class="title-1">Título</h1>
+					<p class="subtitle">Subtítulo de h1</p>
+
+					<h2 class="title-2">Subtítulo</h2>
+					<p class="subtitle">Subtitulo de h2</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="hno-mayor">Hola</p>
+					<p class="hno">Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p class="hno">Hola</p>
+					<p>Hola</p>
+					<div>
+							<p class="hno">Hola</p>
+					</div>
+					<p>Hola</p>
+				</td>
+				<td>
+					<input type="checkbox" class="check">
+					<p class="enabled">Activado</p>
+					<p class="disabled">Desactivado</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="email">
+					<input type="submit" value="enviar">
+				</td>
+				<td>
+					<input type="email">
+					<input type="date" required>
+					<input type="submit" value="enviar">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/contacto.html">Contacto</a> <!-- contacto es una página interna -->
+					<a href="https://ed.team/cursos">Cursos</a>
+					<a href="https://youtube.com/escueladigitalperu">YouTube</a>
+				</td>
+				<td>
+					<a href="/contacto.html">Contacto</a> <!-- contacto es una página interna -->
+					<a href="https://ed.team/cursos">Cursos</a>
+					<a href="https://youtube.com/escueladigitalperu">YouTube</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/video.html">Video</a> <!-- video es una página interna -->
+					<a href="https://ed.team/recursos/clase-2.pdf">Notas</a>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="main" class="main">
+						<article class="post">
+							<p >Especificidad</p>
+						</article>
+					</div>
+				</td>
+				<td>
+					<div id="main" >
+						<article >
+							<p class="description">Especificidad</p>
+						</article>
+					</div>
+					<div class="product">
+						<div class="description">
+							Zapatillas a 100 USD
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="main" class="main">
+						<article class="post">
+							<p class="post-description">Especificidad</p>
+						</article>
+					</div>
+					<div class="product">
+						<div class="product-description">
+							Zapatillas a 1000 USD
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="main" class="main">
+						<article class="post">
+							<p class="small post-description">Especificidad</p>
+						</article>
+					</div>
+					<div class="product">
+						<div class="small product-description">
+							Zapatillas a 1000 USD
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- cascada -->
+					<!-- lo que viene después sobreescribe lo que escribio antes -->
+					<p>cascada</p>
+				</td>
+				<td><p class="small post-description">Hola</p></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="main" class="main">
+						<article class="post">
+							<p class="small post-description">por especificidad</p>
+						</article>
+					</div>
+				</td>
+				<td>
+					<article class="post">
+						<p1 class="small post-description">por cascada</p1>
+					</article>
+				</td>
+			</tr>
+			<tr>
+				<td>Herencia <span>mundo</span></td>
+				<td>
+					<p2>Hola mundo
+						<a href="#">Visita mi página web</a>
+					</p2>
+				</td>
+				<td>
+					<p3>Hola mundo
+						<a href="#">Visita mi página web</a>
+					</p3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>item</li>
+						<li>item</li>
+						<li>item</li>
+						<li>item</li>
+						<li>item <span>final</span> </li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Layout <br/>
+					inline-linea: no crean nuevas líneas para cada elemento, tiene ancho pero no alto, se ajustan al contenido<br/> 
+					block-bloque: Crean una nueva línea para cada elemento, Ocupan todo el espacio horizontal disponible, Tienen ancho y alto<br/>
+				</td>
+			<tr>
+				<td>
+					<h1>Soy un Título - elemento de bloque</h1>
+					<p>soy <span>un span - elemento de línea</span> parrafo - elemento de bloque</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- Box model -->
+					<!-- caja de contenido, de padding y de border  -->
+					<div class="box">
+						Hola soy el contenido
+					</div>
+					<div>Adios</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- margin -->
+					<div class="box-1">
+						Hola
+					</div>
+					<div>
+						Adios
+					</div>
+					<p>soy un parrafo</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- margin en porcentajes -->
+					<div class="box-1">
+						Hola
+					</div>
+					<div class="box-2">
+						Adios
+					</div>
+					<div class="container">
+						<div class="item">
+							Hola mundo
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

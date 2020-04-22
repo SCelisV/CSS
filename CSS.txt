@@ -1,0 +1,17 @@
+Descriptions of all CSS specifications: 
+
+- https://www.w3.org/Style/CSS/specs.en.html
+
+- https://www.w3.org/Style/CSS/Planet/
+
+- https://www.w3.org/Style/CSS20/history.html
+
+- https://www.w3.org/TR/css-2018/
+
+- http://apps.workflower.fi/
+
+- http://apps.workflower.fi/vocabs/css/en
+
+CSS snapshot (estado actual de CSS)
+https://www.w3.org/TR/CSS/
+

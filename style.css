@@ -1,0 +1,419 @@
+/* definición de variables */
+:root {
+    --my-background : white;
+    --my-color-orange: orange;
+    --my-color-gray: gray;
+    --my-font-family : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
+/* definición de variables */
+body{
+    background: var(--my-background);
+    font-family: var(--my-font-family);
+    margin: 10px;
+}
+.title {
+    background: var(--my-color-orange);
+    color: white;
+}
+.title2{
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-size: 16px;
+    background: var(--my-color-gray);
+    color: white;
+}
+.detail {
+    color: grey;
+    font-size: 14px;
+    /* font-family: var(--my-font-family); */
+}
+/* my-styles */
+.my-bold{
+    font-weight: bold;
+}
+.my-center{
+    text-align: center;
+}
+/* my-styles */
+/* images */
+.index_Img {
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+/* images */
+
+/*selectores agrupados*/
+
+.title,
+.detail{
+    color: red;
+    font-size: 14px;
+}
+/*selectores agrupados*/
+/*selectores descendientes*/
+
+/* a todos los item que sean hijos de list */
+.list .list-item{
+    color:red;
+}
+/*
+  html body .list .list-item - casí nunca se debe usar selectores descendientes, ver ESPECIFICIDAD
+ color:red;
+}
+*/
+
+ul li{
+    color:red;
+}
+  
+ul span{ /*span no es hijo, es nieto de ul*/
+color:orange;
+font-size : inherit;
+}
+
+/*tag es descendiente de .list */
+.list .tag { 
+    color: blue;
+}
+/* indica que debe tener las dos clases - cualquier ol que tenga la clase list */
+ol.list{
+    color:green;
+}
+/*selectores descendientes*/
+
+/* selectores de hijo directo */
+
+    /* se ocultan todos 
+    ul li {
+        display: none;
+    }
+    se ocultan todos */
+
+    /* ocultar los subitem */
+    li > ul{
+        display:none;       /*ocultar*/
+    }
+
+    /* hover - seudoclase - pasar el mouse por encima*/
+    li:hover ul{
+        display:block;     /*mostrar*/
+    }
+    /* seudoclase */
+    /* ocultar los subitem */
+/* selectores de hijo directo */
+
+/* selector hermano siguiente - selecciona al elemento que esta justo después de otro */
+
+.title-1 {
+    color:var(--my-color-orange);
+}
+.title-2 {
+    color:var(--my-color-gray);
+}
+.subtitle {
+    /* font-size: 10px; */
+    margin-top: -2em;
+    background-color: whitesmoke;
+    text-align: center;
+}
+.title-1 + .subtitle {
+    color:var(--my-color-orange);
+}
+.title-2 + .subtitle {
+    color:var(--my-color-gray);
+}
+/* selector hermano siguiente */
+
+/* selector hermanoS siguienteS */
+
+    /* sólo selecciona al siguiente
+
+.hno-mayor + .hno { 
+    background: yellowgreen;
+}
+    sólo selecciona al siguiente */
+
+    /* selecciona a todos siguiente */
+.hno-mayor ~ .hno { 
+    background: yellowgreen;
+}
+    /* el div no lo selecciona porque no esta al mismo nivel */
+    /* selecciona a todos siguiente */
+
+.enabled {
+    display: none;
+}
+.check:checked + .enabled{
+    display:block;
+}
+.check:checked ~ .disabled{
+    display: none;
+}
+
+/* selector hermanoS siguienteS */
+
+/* selector Atributos */
+    /* sencillos */
+        /* Atributo y Valor */
+        [type="email"]{
+            border: 1px solid blue;
+        }
+        [type="submit"]{
+            background:red;
+            color: white;
+            border: none;
+        }
+        /* Atributo */
+        [required]{
+            border: 2px solid red;
+            margin: .5em;
+        }
+    /* sencillos */
+    /* empieza con */
+        /* a {
+            color: gray;
+        }
+        [href^="/"],
+        [href^="https://ed.team"]{
+            color: orange;
+        } */
+        
+        a {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/228448/external-link-symbol.png) no-repeat center right / 2rem;
+            padding-right: 2.2rem;
+        }
+        [href^="/"],
+        [href^="https://ed.team"]{
+            color: orange;
+            background: none;
+        }
+        
+        /* termina con */    
+        
+        /* [href$=".pdf"]{
+            color: red;
+        } */
+        
+        [href$=".pdf"]{
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/228448/pdf.png) no-repeat center right / 2rem;
+            padding-right: 2.2rem;
+        }
+        
+    /* selector Atributos */
+
+    /* Especificidad */
+
+    /* muy mala práctica */
+    /* #main .post p {
+        color: red;
+    }
+
+    p {
+        color: green;
+    }
+
+    div#main .post p {
+        color: blue;
+    }
+    
+    body div#main .post p {
+        color: purple;
+    }
+    
+    html body header article div#main .post p {
+        color: purple;
+    }
+ */
+    /* se debería trabajar en un sólo nivel - clases */
+    .description {
+        color:red;
+    }
+    /* si quieres diferenciar las description... 
+    una forma sería creando una descendiente, es recomendable con sólo 2niveles*/
+    .product .description{
+        color:black;
+    }
+    /* la otra forma sería */
+    .post-description {
+        color:red;
+    }
+    /* si quieres diferenciar las description... 
+    una forma sería creando una descendiente, es recomendable con sólo 2niveles*/
+    .product-description{
+        color:black;
+    }
+
+.big {
+    font-size : 2em;
+}
+.normal {
+    font-size : 1em;
+}
+.small{ 
+    font-size: .75em
+}
+
+p{
+    color: red;
+}
+p{
+    color: green
+}
+
+/* se considera mala practica usar important */
+/* comentario explicando porque use el important */
+
+.post p.post-description{
+    color:purple !important;
+}
+p.post-description{
+    color:red !important;
+}
+p{
+    color: green !important ; 
+}
+
+p1.post-description{
+    color:purple !important;
+}
+p1.post-description{
+    color:red !important;
+}
+/* Herencia */
+span {
+    font-size: .5em;
+}
+
+/* inherit -  obliga a un elemento a heredar su propiedad*/
+p{
+    --color: red;
+    color: var(--color);
+}
+
+a{
+    color: var(--color);
+}
+p2{
+    color: red;
+}
+
+a{
+    color: inherit;
+}
+
+/* initial -  resetea un elemento a su valor inicial*/
+p3{
+    color: red;
+}
+
+a{
+    color: initial;
+}
+
+ul{
+    color: red;
+}
+li{
+    color: initial;
+}
+/* Elementos de bloque y elementos de línea */
+h1{
+    /* elemento de bloque que puedo definir un alto y un ancho */
+    background: yellow;
+    height: 200px;
+    width: 500px;
+    /* puedo decirle que se comporte como un elemento inline */
+    display: inline;
+}
+
+p{
+    background: pink;
+    display: inline;
+}
+span {
+    /* aunque definir un alto y un ancho no los respeta */
+    background: yellow;
+    height: 200px;
+    width: 200px;
+    /* elemento de linea que "transformo" en bloque para que se comporte como bloque */
+    display: block;
+    /* si quiero que este elemento tenga las propiedades de bloque y de línea: uso inline-block */
+    display: inline-block;
+    /* tendrá ancho algo y se ubicará en linea con los demás.. */
+    display: none;
+    /* para no mostrar el elemento */
+}
+.box {
+    background: yellow;
+    background-clip: content-box;
+    /* Box model . contenido más padding más border*/
+    width:50px;
+    height: 100px;
+    /* padding separación entre el border y el contenido */
+    padding: 50px;
+    border: 30px solid black;
+    margin: 50px;
+    /* Box model */
+    /* Box sizing el tamaño declarado por el width y el heigh*/
+    /* lo que me indica es que el box-content va a tomar el tamañano declarado en el box-sizing, en este caso el content, pero podría ser el padding */
+    box-sizing: content-box;
+    /* Box sizing */
+}
+/* Propiedades de margin */
+
+[class^="box-"]{
+    background: yellow;
+    padding: 50px;
+    width: 100px;
+    /* float para poner un elemento al lado del otro */
+    float:left; 
+}
+
+.box-1{
+    /* Este el el orden arriba, derecha, abajo, izquierda - agujas del reloj*/
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    margin-left: 30px;
+    
+    /* margin: 50px 100px 50px 100px; */
+    /* para el tercer y el cuarto valor vuelve a empezar ex: 50px 100px*/
+    /* margin: 50px 100px; */
+    /* el cuarto lo completa con su opuesto ex: 100px */
+    /* margin: 50px 100px 30px; */
+    /* si se pone uno sólo se aplica el mismo a todos */
+    margin: 10px;
+}
+
+/* Propiedades de margin - por porcentaje*/
+
+/* Práctica recomendada para asegurar que el padding y el border no van a aumentar el tamaño a la caja */
+*{
+    box-sizing: border-box;
+}
+
+[class^="box-"]{
+    background: yellow;
+    padding: 50px;
+    width: 50%;
+    /* margin-left: 50%; los porcentajes son relativos al papa*/
+}
+/* Es útil para pegar dos elementos */
+.box-1{
+    margin-bottom: 50px;
+}
+.box-2{
+    margin-top: -50px;
+}
+.container {
+    width: 600px;
+    background: lime;
+    /* esta es la mejor manera de centrar el elemento */
+    margin-left: auto;
+    margin-right: auto;
+}
+.item{
+    margin-left: -20px;
+    margin-right: -20px;
+    border: 1px solid red;
+}
